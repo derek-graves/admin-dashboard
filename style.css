@@ -1,4 +1,27 @@
-body div {
-  font-size: 100px;
-  color: cornflowerblue;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 5fr;
+
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.sidebar {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+
+.header {
+  grid: 1 / 2 -1;
+}
+
+.main-content {
+  grid: 2 / 2;
 }
