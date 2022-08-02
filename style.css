@@ -3,7 +3,7 @@
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: url(./assets/MaterialIcons-Regular.ttf);
+  src: url(./assets/fonts/MaterialIcons-Regular.ttf);
 }
 
 .material-icons {
@@ -31,6 +31,12 @@
   font-feature-settings: 'liga';
 }
 
+/* Main font: PT Sans*/
+@font-face {
+  font-family: "PT Sans";
+  src: url(./assets/fonts/PTSans-Regular.ttf);
+}
+
 
 * {
   padding: 0;
@@ -40,10 +46,12 @@
 
 .content {
   display: grid;
-  grid-template: minmax(120px, 1fr) 4fr / minmax(175px, 1fr) 4fr;
+  grid-template: minmax(120px, 1fr) 4fr / minmax(min-content, 0.85fr) 4fr;
 
   min-height: 100vh;
   min-width: 100vw;
+
+  font-family: "PT Sans", sans-serif;
 }
 
 .sidebar {
@@ -51,6 +59,50 @@
   grid-column: 1;
 
   background-color: salmon;
+
+  /* flexbox would be the better choice here, but grid is used because
+  the purpose of this project is to practice grid */
+  display: grid;
+  grid-template: repeat(3, min-content) / 1fr;
+  gap: 40px;
+}
+
+.logo, .sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  padding: 16px;
+}
+
+.logo > span {
+  font-size: 36px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sidebar li {
+  padding: 12px;
+  padding-left: 20px;
+}
+
+.sidebar li:hover {
+  border-left: 4px solid black;
+  padding-left: calc(20px - 4px);
+
+  background-color: rgb(206, 104, 93);
+
+  cursor: pointer;
+}
+
+.sidebar p {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 
