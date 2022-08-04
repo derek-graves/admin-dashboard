@@ -77,8 +77,8 @@ body {
 }
 
 .profile {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 
   border: 3px solid white;
   border-radius: 30px;
@@ -144,10 +144,11 @@ body {
   
   background-color: cornflowerblue;
   padding: 16px 36px;
+  padding-right: 52px;
 
   display: grid;
   grid-template: repeat(2, min-content) / 3fr 2fr;
-  row-gap: 16px;
+  row-gap: 24px;
   column-gap: 8px;
 }
 
@@ -163,7 +164,9 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
+
+  padding-right: 20px;
 }
 
 #notifications {
@@ -179,8 +182,8 @@ body {
 }
 
 .welcome .profile {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
 
   grid-area: profile;
 }
@@ -203,12 +206,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 30px;
+  gap: 25px;
 }
 
 .actions button {
   font-family: "PT Sans", sans-serif;
-  width: 95px;
+  width: 90px;
   padding: 8px 0;
   background-color: dimgrey;
 
