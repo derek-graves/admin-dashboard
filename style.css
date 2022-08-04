@@ -1,9 +1,16 @@
-/* Material Icon font and relevant class for styling */
+/* --- --- --- --- --- --- IMPORTS --- --- --- --- --- --- */
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   src: url(./assets/fonts/MaterialIcons-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/MaterialIcons-Outlined.otf);
 }
 
 .material-icons {
@@ -31,29 +38,54 @@
   font-feature-settings: 'liga';
 }
 
-/* Main font: PT Sans*/
 @font-face {
   font-family: "PT Sans";
   src: url(./assets/fonts/PTSans-Regular.ttf);
 }
 
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* --- --- --- --- --- --- GENERAL SELECTORS --- --- --- --- --- --- */
+:root {
+  --default-fonts: "PT Sans", sans-serif;
 }
 
-.content {
-  display: grid;
-  grid-template: minmax(120px, 1fr) 4fr / minmax(min-content, 0.85fr) 4fr;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}  
 
-  min-height: 100vh;
+button, input {
+  font: inherit;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  display: grid;
+  grid-template: min-content 1fr / minmax(min-content, 0.85fr) 4fr;
+
+  height: 100vh;
   min-width: 100vw;
 
   font-family: "PT Sans", sans-serif;
 }
 
+.profile {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid white;
+  border-radius: 30px;
+  background-color: white;
+}
+
+/* --- --- --- --- --- --- SIDEBAR --- --- --- --- --- --- */
 .sidebar {
   grid-row: 1 / -1;
   grid-column: 1;
@@ -105,13 +137,75 @@
   font-size: 20px;
 }
 
-
+/* --- --- --- --- --- --- HEADER --- --- --- --- --- --- */
 .header {
-  grid: 1 / 2 -1;
+  grid-row: 1;
+  grid-column: 2 / -1;
+  
   background-color: cornflowerblue;
+  padding: 16px 36px;
+
+  display: grid;
+  grid-template: repeat(2, min-content) / 3fr 2fr;
+  row-gap: 16px;
+  column-gap: 8px;
 }
 
+.header p, .actions button {
+  font-weight: bold;
+}
+
+.header p {
+  white-space: nowrap;
+}
+
+.account {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+#notifications {
+  font-family: "Material Icons Outlined";
+}
+
+.welcome {
+  display: grid;
+  grid-template: "profile upper" min-content
+                 "profile lower" min-content / min-content auto;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.welcome .profile {
+  width: 55px;
+  height: 55px;
+
+  grid-area: profile;
+}
+
+.upper {
+  grid-area: upper;
+  align-self: end;
+
+  font-size: 14px;
+}
+
+.lower {
+  grid-area: lower;
+  align-self: start;
+
+  font-size: 20px;
+}
+
+.actions button {
+  font-family: "PT Sans", sans-serif;
+}
+
+/* --- --- --- --- --- --- MAIN CONTENT --- --- --- --- --- --- */
 .main-content {
-  grid: 2 / 2;
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
   background-color: maroon;
 }
