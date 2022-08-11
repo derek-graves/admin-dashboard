@@ -254,5 +254,76 @@ body {
 .main-content {
   grid-row: 2 / -1;
   grid-column: 2 / -1;
-  background-color: maroon;
+
+  background-color: #ddd;
+
+  padding: 32px 16px;
+
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 24px;
+
+  overflow: scroll;
+}
+
+.main-content-header {
+  font-size: 20px;
+
+  padding-bottom: 8px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  column-gap: 24px;
+  row-gap: 32px;
+}
+
+.card, announcements, latest {
+  border-radius: 8px;
+
+  background-color: #eee;
+  box-shadow: 2px 3px 3px #bbb;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  padding-top: 24px;
+  border-left: 8px solid goldenrod;
+}
+
+.card-header {
+  margin-bottom: 4px;
+}
+
+.card p {
+  color: #888;
+}
+
+.card-icons {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-icons span {
+  font-family: "Material Icons Outlined";
+
+  padding: 4px;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.card-icons span:hover {
+  cursor: pointer;
+  background-color: #ddd;
 }
