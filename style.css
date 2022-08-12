@@ -298,10 +298,12 @@ body {
 }
 
 .card-header {
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
 .card p {
+  font-size: 16px;
   color: #888;
 }
 
@@ -330,6 +332,7 @@ body {
 
 .announcements {
   padding: 24px;
+  margin-bottom: 32px;
 }
 
 .announcement-header {
@@ -354,4 +357,28 @@ hr {
 
 .trending {
   padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  gap: 12px;
+}
+
+#alyssa, #bertrand {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.user-info {
+  font-size: 16px;
+}
+
+.tag {
+  color: #888;
 }
