@@ -281,7 +281,7 @@ body {
   row-gap: 32px;
 }
 
-.card, announcements, latest {
+.card, .announcements, .trending {
   border-radius: 8px;
 
   background-color: #eee;
@@ -326,4 +326,32 @@ body {
 .card-icons span:hover {
   cursor: pointer;
   background-color: #ddd;
+}
+
+.announcements {
+  padding: 24px;
+}
+
+.announcement-header {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.announcements p {
+  color: #888;
+
+  font-size: 14px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 16px 0;
+  padding: 0;
+}
+
+.trending {
+  padding: 24px;
 }
