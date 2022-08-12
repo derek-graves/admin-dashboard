@@ -118,6 +118,10 @@ body {
   font-weight: bold;
 }
 
+.nav-top, .nav-bottom {
+  cursor: pointer;
+}
+
 .sidebar li {
   padding: 12px;
   padding-left: 20px;
