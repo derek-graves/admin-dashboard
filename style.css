@@ -46,6 +46,10 @@
 /* --- --- --- --- --- --- GENERAL SELECTORS --- --- --- --- --- --- */
 :root {
   --default-fonts: "PT Sans", sans-serif;
+
+  --sidebar-bg: #3f3f46;
+  --sidebar-main: #d4d4d8;
+  --sidebar-hover: #52525b;
 }
 
 * {
@@ -90,7 +94,7 @@ body {
   grid-row: 1 / -1;
   grid-column: 1;
 
-  background-color: salmon;
+  background-color: var(--sidebar-bg);
 
   /* flexbox would be the better choice here, but grid is used because
   the purpose of this project is to practice grid */
@@ -103,6 +107,8 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+
+  color: var(--sidebar-main);
 }
 
 .logo {
@@ -128,16 +134,15 @@ body {
 }
 
 .sidebar li:hover {
-  border-left: 4px solid black;
+  border-left: 4px solid var(--sidebar-main);
   padding-left: calc(20px - 4px);
 
-  background-color: rgb(206, 104, 93);
+  background-color: var(--sidebar-hover);
 
   cursor: pointer;
 }
 
 .sidebar p {
-  font-weight: bold;
   font-size: 20px;
 }
 
