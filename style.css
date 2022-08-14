@@ -51,6 +51,7 @@
   --sidebar-main: #d4d4d8;
   --sidebar-hover: #52525b;
   --header-bg: #fafafa;
+  --action-hover: #71717a;
 }
 
 * {
@@ -261,6 +262,13 @@ body {
   border-radius: 24px;
 }
 
+.actions button:hover {
+  background-color: var(--action-hover);
+}
+
+.actions button:active {
+  
+}
 /* --- --- --- --- --- --- MAIN CONTENT --- --- --- --- --- --- */
 .main-content {
   grid-row: 2 / -1;
