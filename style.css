@@ -348,11 +348,16 @@ body {
   border-radius: 8px;
 
   cursor: pointer;
+
+  transition: transform 0.1s ease-in-out;
 }
 
 .card-icons span:hover {
-  cursor: pointer;
-  background-color: #ddd;
+  background-color: var(--zinc200);
+}
+
+.card-icons span:active {
+  transform: scale(0.9);
 }
 
 .announcements {
