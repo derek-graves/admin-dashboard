@@ -50,6 +50,7 @@
   --sidebar-bg: #3f3f46;
   --sidebar-main: #d4d4d8;
   --sidebar-hover: #52525b;
+  --header-bg: #fafafa;
 }
 
 * {
@@ -151,7 +152,7 @@ body {
   grid-row: 1;
   grid-column: 2 / -1;
   
-  background-color: cornflowerblue;
+  background-color: var(--header-bg);
   padding: 16px 36px;
   padding-right: 52px;
 
@@ -187,7 +188,8 @@ body {
   padding-left: 32px;
   border-radius: 24px;
 
-  background-color: #ddd;
+  background-color: var(--sidebar-main);
+  color: var(--sidebar-bg)
 }
 
 .search-bar span {
@@ -196,7 +198,7 @@ body {
   left: 6px;
 
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--sidebar-bg);
 }
 
 .account {
@@ -250,8 +252,8 @@ body {
 
 .actions button {
   font-family: "PT Sans", sans-serif;
-  color: white;
-  background-color: dimgrey;
+  color: var(--sidebar-main);
+  background-color: var(--sidebar-bg);
 
   width: 90px;
   padding: 8px 0;
