@@ -55,6 +55,10 @@
   --zinc600: #52525b;
   --zinc700: #3f3f46;
 
+  --alyssa: #f6f49d;
+  --dirk: #5dae8b;
+  --loretta: #ff7676;
+  --bertrand: #466c95;
 }
 
 * {
@@ -193,7 +197,7 @@ body {
   border-radius: 24px;
 
   background-color: var(--zinc200);
-  color: var(--zinc700)
+  color: var(--zinc700);
 }
 
 .search-bar span {
@@ -231,7 +235,11 @@ body {
   height: 60px;
 
   grid-area: profile;
+
+  border: 7px solid var(--dirk);
 }
+
+
 
 .upper {
   grid-area: upper;
@@ -319,7 +327,7 @@ body {
 
   padding: 16px;
   padding-top: 24px;
-  border-left: 8px solid goldenrod;
+  border-left: 8px solid var(--dirk);
 }
 
 .card-header {
@@ -403,6 +411,27 @@ hr {
 #alyssa, #bertrand {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+#alyssa {
+  background-color: var(--alyssa);
+  border-color: var(--alyssa);
+}
+
+#dirk, .dirk {
+  background-color: var(--dirk);
+  border: 4.5px solid var(--dirk);
+}
+
+#loretta {
+  background-color: var(--loretta);
+  border-color: var(--loretta);
+}
+
+#bertrand {
+  background-color: var(--bertrand);
+  border-color: var(--bertrand);
+
 }
 
 .user-info {
